@@ -1,0 +1,231 @@
+*{
+margin: 0;
+padding: 0;
+font-family: 'Nunito', sans-serif;
+}
+section{
+padding: 50px 0;
+}
+.wrap{
+width: 90%;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+}
+
+.main-h1{
+font-size: 40px;
+text-align: center;
+text-transform: uppercase;
+}
+
+.main-p{
+text-align: center;
+}
+
+.secondary-h1{
+font-size: 25px;
+margin: 10px;
+text-transform: uppercase;
+text-align: center;
+color: #fff;
+}
+
+.secondary-p{
+color: #fff;
+text-align: center;
+}
+
+.main__pane{
+width: 50%;
+position: relative;
+padding-bottom: 20px;
+}
+.color__line{
+width: 70px;
+height: 3px;
+background-color: #992b2b;
+margin: 10px auto 30px;
+}
+.uncountable{
+background-color: #fff;
+}
+.countable{
+background-color: #ededed;
+}
+/* HEADER */
+.header{
+width: 100%;
+height: 60px;
+background-color: #992b2b;
+}
+
+.header__logo{
+width: 30%;
+height: 40px;
+margin: 10px 0;
+}
+.header__img{
+width: 40px;
+height: 40px;
+}
+.header__name{
+width: 40%;
+}
+#h1__headline{
+line-height: 60px;
+letter-spacing: 5px;
+color: #fff;
+}
+.header__nav{
+width: 30%;
+}
+.header-nav__ul{
+width: 100%;
+height: 50%;
+margin-top: 15px;
+display: flex;
+justify-content: space-around;
+list-style-type: none;
+}
+.header-nav__a{
+text-decoration: none;
+color: #fff;
+font-size: 13px;
+text-transform: uppercase;
+font-weight: 700;
+line-height: 30px;
+}
+/* SLIDER */
+.slider__photo{
+width: 100%;
+height: 800px;
+}
+/* ABOUT */
+#about__p{
+width: 60%;
+margin: 0 auto;
+text-align: justify;
+}
+.about__img{
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+margin: auto;
+border-radius: 15px;
+}
+/* PRODUCTS; */
+.products__type{
+width: 400px;
+}
+.products__img{
+border-radius: 15px;
+}
+/* PASTILA, Fripses, Box */
+.pane-centered{
+display: flex;
+}
+.main-ul{
+width: 80%;
+margin: auto;
+list-style-type: none;
+list-style-image: url(../img/check1.png);
+}
+.main-li{
+margin-bottom: 20px;
+font-size: 20px;
+}
+.main-pane__imgWrap{
+display: flex;
+justify-content: space-between;
+padding-bottom: 30px;
+}
+.main-pane__img{
+width: 800px;
+height: 400px;
+border-radius: 15px;
+}
+.main-pane__arrow{
+width: 20px;
+display: flex;
+}
+.arrow-wrap__img{
+width: 20px;
+height: 50px;
+margin: auto;
+cursor: pointer;
+}
+#arrow-wrap__img{
+transform: scale(-1, 1);
+}
+.main-pane__btnWrap{
+width: 800px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+}
+.main_button{
+width: 390px;
+height: 50px;
+background-color: #992b2b;
+font-size: 18px;
+text-transform: uppercase;
+outline: none;
+border: none;
+border-radius: 15px;
+padding: 10px;
+color: #fff;
+}
+
+
+
+/* MAKEITYOURSELF */
+
+
+
+
+/* ADVANTAGES */
+.advantages{
+background-color: #992b2b;
+}
+.advantages__block{
+width: 300px;
+}
+.advantages-img{
+border-radius: 15px;
+}
+#main-h1__advantages{
+color: #fff;
+}
+#color-line__advantages{
+background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT */
+.pane__input{
+width: 70%;
+height: 50px;
+border-radius: 15px;
+margin: 20px auto;
+border: none;
+outline: none;
+padding-left: 10px;
+}
+textarea{
+resize: none;
+border: none;
+outline: none;
+border-radius: 15px;
+padding: 10px 0 0 10px;
+}
