@@ -200,15 +200,28 @@ color: #fff;
 }
 #color-line__advantages{
 background-color: #fff;
+color: red;
 }
 
 
 
 
-
-
-
-
+/* ORDER */
+.order__wrap{
+width: 30%;
+margin: 0 auto;
+background-color: red;
+}
+.order__select{
+background-color: #fff;
+width: 250px;
+text-align: center;
+}
+.plus__img{
+width: 40px;
+height: 40px;
+margin: 20px auto;
+}
 
 
 
