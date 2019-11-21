@@ -216,31 +216,26 @@
   <input type="hidden" name="project_name" value="YouFruit">
   <input type="hidden" name="admin_email" value="oleoot28@gmail.com">
   <input type="hidden" name="form_subject" value="Order">
-    <p id="order__selectf"><select size="1"required name="type" class="order__select">
+  <select size="1"required name="type" class="order__select" id="order__selectf">
       <option selected disabled>Выберите вкус</option>
       <option value="Яблоко">Яблочная</option>
       <option value="Тыква">Тыквенная</option>
       <option value="свекла">Свекольная</option>
       <option value="Мята">Мятная</option>
-    </select></p>
-    <p id="order__selects"><select size="1"required name="quantity" class="order__select">
+    </select>
+    <select size="1"required name="quantity" class="order__select" id="order__selects">
         <option selected disabled>Количество</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-      </select></p>
-    <p id="order__selectt"><select size="1"required name="weight" class="order__select">
+      </select>
+    <select size="1"required name="weight" class="order__select" id="order__selectt">
         <option selected disabled>Вес</option>
         <option value="100гр">100гр</option>
         <option value="200гр">200гр</option>
-      </select></p>
-      <p id="order__selectt"><select size="1"required name="weight1" class="order__select">
-          <option selected disabled>Вес</option>
-          <option value="100гр">100гр</option>
-          <option value="200гр">200гр</option>
-        </select></p>
+      </select>
       <div class="order__plus">
         <img src="img/plus.png" alt="" class="plus__img" id="plus__img">
       </div>
@@ -283,40 +278,6 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="slick.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('.slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: false
-      });
-    })
-  </script>
-
-  <script>
-  $(document).ready(function() {
-
-  //E-mail Ajax Send
-  $(".order__form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
-  });
-</script>
     <script src="script/script.js"></script>
 </body>
 <!-- пастила(вкусы)
