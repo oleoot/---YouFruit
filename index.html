@@ -212,11 +212,17 @@
 
 <section class="order">
 <div class="order__wrap" id="order__wrap">
-  <form id="order__form" class="order__form" action="telegram.php" method="post">
+  <form id="order__form" class="order__form" method="post">
   <input type="hidden" name="project_name" value="YouFruit">
   <input type="hidden" name="admin_email" value="oleoot28@gmail.com">
   <input type="hidden" name="form_subject" value="Order">
-  <select size="1"required name="type" class="order__select" id="order__selectf">
+    <select size="1"required name="vid" class="order__select" id="order__selectff">
+    <option selected disabled>Выберите тип</option>
+    <option value="Пастила">Пастила</option>
+    <option value="Фрипсы">Фрипсы</option>
+    <option value="Набор">Набор</option>
+    </select>
+    <select size="1"required name="type" class="order__select" id="order__selectf">
       <option selected disabled>Выберите вкус</option>
       <option value="Яблоко">Яблочная</option>
       <option value="Тыква">Тыквенная</option>
@@ -235,14 +241,18 @@
         <option selected disabled>Вес</option>
         <option value="100гр">100гр</option>
         <option value="200гр">200гр</option>
-      </select>
-      <div class="order__plus">
-        <img src="img/plus.png" alt="" class="plus__img" id="plus__img">
-      </div>
-          <button type="submit" name="button">Заказать</button>
+    </select>
+    <button type="submit" name="button" class="order__button">Заказать</button>
       </form>
+      <div class="order__plus">
+        <img src="img/plus.png" alt="" class="plus__img1" id="plus__img1">
+      </div>
 </div>
 </section>
+
+
+
+
 
 
   <section class="contact countable">

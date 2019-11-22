@@ -11,7 +11,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 
 //E-mail Ajax Send
-$(".order__form").submit(function() { //Change
+$(".order__form , .order__form1").submit(function() { //Change
   var th = $(this);
   $.ajax({
     type: "POST",
@@ -127,7 +127,8 @@ $(".order__form").submit(function() { //Change
 
 
 
-let plus = document.getElementById('plus__img');
+let plus = document.getElementById('plus__img1');
+let zero =  document.getElementById('order__selectff');
 let first = document.getElementById('order__selectf');
 let second = document.getElementById('order__selects');
 let third = document.getElementById('order__selectt');
@@ -138,6 +139,8 @@ let form = document.getElementById('order__form');
 let orderWrap = document.getElementById('order__wrap');
 plus.addEventListener("click", more);
 function more(){
+let newNodez = zero.cloneNode(true);
+newNodez.setAttribute("name","vid" + count);
 let newNode = first.cloneNode(true);
 newNode.setAttribute("name","type" + count);
 let newNodes = second.cloneNode(true);
@@ -145,6 +148,7 @@ newNodes.setAttribute("name","quantity" + count);
 let newNodet = third.cloneNode(true);
 newNodet.setAttribute("name","weight" + count);
 count++;
+form.appendChild(newNodez);
 form.appendChild(newNode);
 form.appendChild(newNodes);
 form.appendChild(newNodet);

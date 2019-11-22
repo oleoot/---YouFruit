@@ -208,21 +208,35 @@ color: red;
 
 /* ORDER */
 .order__wrap{
-width: 30%;
+width: 90%;
 margin: 0 auto;
-background-color: red;
+position: relative;
 }
 .order__select{
-background-color: #fff;
-width: 250px;
-text-align: center;
+width: 24%;
+height: 40px;
+border-radius: 20px;
+margin-bottom: 20px;
+outline: none;
+text-align-last: center;
+line-height: 40px;
+text-transform: uppercase;
+background-color: #992b2b;
+color: #fff;
+border: none;
 }
-.plus__img{
+.plus__img1{
 width: 40px;
 height: 40px;
 margin: 20px auto;
 }
-
+.order__button{
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
 
 
 /* CONTACT */
