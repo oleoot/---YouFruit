@@ -1,4 +1,15 @@
 $(document).ready(function() {
+     $(".header__nav").on("click", "a", function(event) {
+       event.preventDefault();
+       let id = $(this).attr('href'),
+         top = $(id).offset().top;
+       $('body,html').animate({
+         scrollTop: top
+       }, 1500);
+     });
+   });
+
+$(document).ready(function() {
   $('.slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -6,12 +17,33 @@ $(document).ready(function() {
     autoplaySpeed: 3000,
     arrows: false
   });
-})
+});
+
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 2,
+  grabCursor: true,
+  spaceBetween: 70,
+  freeMode: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 4.5,
+      spaceBetween: 50,
+    }
+  }
+});
 
 $(document).ready(function() {
 
 //E-mail Ajax Send
-$(".order__form , .order__form1").submit(function() { //Change
+$(".order__form").submit(function() { //Change
   var th = $(this);
   $.ajax({
     type: "POST",
@@ -32,6 +64,15 @@ $(".order__form , .order__form1").submit(function() { //Change
 
 
 
+// var swiper1 = new Swiper('.s1', {
+//   slidesPerView: 4.5,
+//   spaceBetween: 70,
+//   freeMode: true,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+// });
 // let plus = document.getElementById('plus__img');
 // let form = document.getElementById('order__form');
 // let orderWrap = document.getElementById('order__wrap');
@@ -127,20 +168,130 @@ $(".order__form , .order__form1").submit(function() { //Change
 
 
 
-let plus = document.getElementById('plus__img1');
-let zero =  document.getElementById('order__selectff');
-let first = document.getElementById('order__selectf');
-let second = document.getElementById('order__selects');
-let third = document.getElementById('order__selectt');
-let count = 1;
 
+
+
+
+// let orderForm = document.getElementById('order__form');
+// let plus = document.getElementById('plus__img1');
+// let zero =  document.getElementsByClassName('order__selectff');
+// let zeroEl = orderForm.querySelectorAll("select.order__selectff");
+// let zeroId =  document.getElementById('order__selectff');
+// let first = document.getElementById('order__selectf');
+// let second = document.getElementById('order__selects');
+// let third = document.getElementById('order__selectt');
+// let pastila = document.getElementsByClassName('select__pastila');
+// let frips = document.getElementsByClassName('select__frips');
+//
+// let fripsArr = [].slice.call(frips);
+// let pastilaArr = [].slice.call(pastila);
+// // let zeroArr = [].slice.call(zero);
+// let count = 1;
+// // console.log(zero[0]);
+// // zeroArr.forEach(one);
+// // zero[0].onchange = function() {
+// //   let indexSelected = zero[0].selectedIndex, option = zero[0].querySelectorAll('option')[indexSelected];
+// // let selectedId = option.getAttribute('id');
+// // console.log(indexSelected);
+//
+// console.log(orderForm);
+// orderForm.addEventListener('change', function(event){
+//     let elem = event.target;
+// // console.log(elem);
+// console.log(elem.className);
+//     if(elem.id === 'order__selectff'){
+//
+//          console.log(elem.value);
+//       function one() {
+//       let indexSelected = elem.selectedIndex, option = elem.querySelectorAll('option')[indexSelected];
+//       let selectedId = option.getAttribute('id');
+// console.log(indexSelected);
+//
+//          if(selectedId == '1'){
+//          // alert(1);
+//          for(i = 0; i<pastilaArr.length; i++){
+//          pastilaArr[i].hidden = false;
+//          }
+//          for(i = 0; i<fripsArr.length; i++){
+//          fripsArr[i].hidden = true;
+//          }
+//          console.log(fripsArr)
+//          }
+//
+//          else if(selectedId == '2'){
+//          for(i = 0; i<pastilaArr.length; i++){
+//             // console.log(pastilaArr[i]);
+//          pastilaArr[i].hidden = true;
+//          console.log(pastilaArr[i]);
+//          }
+//          for(i = 0; i<fripsArr.length; i++){
+//             // console.log(fripsArr[i]);
+//          fripsArr[i].hidden = false;
+//          // console.log(fripsArr[i])
+//          }
+//          };
+//     };
+//     one();
+// }
+//
+// }
+//
+// );
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// let form = document.getElementById('order__form');
+// let orderWrap = document.getElementById('order__wrap');
+// plus.addEventListener("click", more);
+// function more(){
+// let newNodez = zeroId.cloneNode(true);
+// newNodez.setAttribute("name","vid" + count);
+// let newNode = first.cloneNode(true);
+// newNode.setAttribute("name","type" + count);
+// let newNodes = second.cloneNode(true);
+// newNodes.setAttribute("name","quantity" + count);
+// let newNodet = third.cloneNode(true);
+// newNodet.setAttribute("name","weight" + count);
+// count++;
+// form.appendChild(newNodez);
+// form.appendChild(newNode);
+// form.appendChild(newNodes);
+// form.appendChild(newNodet);
+// }
+//
+
+
+
+
+
+
+
+
+
+
+
+
+let plus = document.getElementById('plus__img');
+let first = document.getElementById('order-select__first');
+let second = document.getElementById('order-select__second');
+let third = document.getElementById('order-select__third');
+
+let count = 1;
 
 let form = document.getElementById('order__form');
 let orderWrap = document.getElementById('order__wrap');
 plus.addEventListener("click", more);
 function more(){
-let newNodez = zero.cloneNode(true);
-newNodez.setAttribute("name","vid" + count);
 let newNode = first.cloneNode(true);
 newNode.setAttribute("name","type" + count);
 let newNodes = second.cloneNode(true);
@@ -148,7 +299,6 @@ newNodes.setAttribute("name","quantity" + count);
 let newNodet = third.cloneNode(true);
 newNodet.setAttribute("name","weight" + count);
 count++;
-form.appendChild(newNodez);
 form.appendChild(newNode);
 form.appendChild(newNodes);
 form.appendChild(newNodet);
