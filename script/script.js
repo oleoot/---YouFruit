@@ -1,5 +1,5 @@
 $(document).ready(function() {
-     $(".header__nav").on("click", "a", function(event) {
+     $(".header__nav, .menu-ul").on("click", "a", function(event) {
        event.preventDefault();
        let id = $(this).attr('href'),
          top = $(id).offset().top;
@@ -8,6 +8,17 @@ $(document).ready(function() {
        }, 1500);
      });
    });
+
+   // $(document).ready(function() {
+   //      $(".menu-ul").on("click", "a", function(event) {
+   //        event.preventDefault();
+   //        let id = $(this).attr('href'),
+   //          top = $(id).offset().top;
+   //        $('body,html').animate({
+   //          scrollTop: top
+   //        }, 1500);
+   //      });
+   //    });
 
 $(document).ready(function() {
   $('.slider').slick({
@@ -20,20 +31,30 @@ $(document).ready(function() {
 });
 
 var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 2,
+  slidesPerView: 2.5,
   grabCursor: true,
-  spaceBetween: 70,
+  spaceBetween: 30,
   freeMode: true,
   breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+    320: {
+      slidesPerView: 1.5,
+    },
+    375: {
+      slidesPerView: 1.5,
+    },
+    425: {
+      slidesPerView: 1.5,
     },
     768: {
-      slidesPerView: 4,
-      spaceBetween: 40,
+      slidesPerView: 2.5,
     },
-    1024: {
+    1025: {
+      slidesPerView: 3.5,
+    },
+    1280: {
+      slidesPerView: 3.5,
+    },
+    1441: {
       slidesPerView: 4.5,
       spaceBetween: 50,
     }
@@ -61,7 +82,26 @@ $(".order__form").submit(function() { //Change
 
 });
 
+let menuBar = document.getElementsByClassName("header-menu__bars")[0];
+let menu = document.getElementsByClassName('menu')[0];
+let cross = document.getElementsByClassName("menu__img")[0];
+let menuUl = document.getElementById('menu__ul');
 
+
+
+menuBar.addEventListener("click", menuToggle);
+function menuToggle(){
+menu.style.display = "block";
+}
+cross.addEventListener("click", closeAction);
+function closeAction(){
+menu.style.display = 'none';
+}
+
+menuUl.addEventListener("click", close);
+function close(){
+menu.style.display = 'none';
+}
 
 
 // var swiper1 = new Swiper('.s1', {

@@ -30,13 +30,28 @@
           <li class="header-nav__li"><a href="#about" class="header-nav__a">О нас</a></li>
           <li class="header-nav__li"><a href="#products" class="header-nav__a">Продукция</a></li>
           <li class="header-nav__li"><a href="#pastila" class="header-nav__a">Магазин</a></li>
-          <li class="header-nav__li"><a href="#advantages" class="header-nav__a">Преимущества</a></li>
+          <!-- <li class="header-nav__li"><a href="#advantages" class="header-nav__a">Преимущества</a></li> -->
           <li class="header-nav__li"><a href="#order" class="header-nav__a">Купить</a></li>
           <li class="header-nav__li"><a href="#contact" class="header-nav__a">Контакты</a></li>
         </ul>
+        <div class="header__menu header-menu">
+        <img src="img/bars.png" alt="menu" class="header-menu__bars">
+        </div>
       </nav>
     </div>
   </header>
+  <div class="menu" id="menu">
+    <div class="menu__wrap">
+      <img src="img/close.png" alt="close" class="menu__img">
+    </div>
+    <ul id="menu__ul" class="menu-ul">
+      <li class="menu__li"><a href="#about" class="menu-ul__a">О нас</a></li>
+      <li class="menu__li"><a href="#products" class="menu-ul__a">Продукция</a></li>
+      <li class="menu__li"><a href="#pastila" class="menu-ul__a">Магазин</a></li>
+      <li class="menu__li"><a href="#order" class="menu-ul__a">Купить</a></li>
+      <li class="menu__li"><a href="#contact" class="menu-ul__a">Контакты</a></li>
+    </ul>
+  </div>
   <div class="slider">
     <div class="slider__block" id="slider__block">
       <img src="img/main-photo2.jpg" alt="" class="slider__photo">
@@ -46,17 +61,20 @@
     </div>
   </div>
   <section class="about uncountable" id="about">
-    <div class="wrap wrap__flex">
+    <div class="headline__wrap">
+    <h1 class="main-h1">О нас</h1>
+    <div class="color__line"></div>
+    </div>
+    <div class="wrap wrap__flex" id="about__wrap">
       <div class="main__pane">
-        <h1 class="main-h1">О нас</h1>
-        <div class="color__line"></div>
+        <img src="img/us.jpg" alt="" class="about__img">
+        <img src="https://via.placeholder.com/400x500" alt="" class="about__imgPhone">
+      </div>
+      <div class="main__pane">
         <p class="main-p" id="about__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero facilis, aperiam ullam ducimus nulla minima, laborum maxime. Illum, cupiditate. Tempora autem quidem similique, id aut error, dolorem omnis quam
           in.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam officiis dicta fugiat at commodi assumenda corrupti quis beatae voluptates itaque ex, harum magnam perspiciatis odit, id, quaerat natus vel! Qui?Lorem ipsum dolor sit
           amet, consectetur adipisicing elit. Cum mollitia sapiente omnis iste tenetur impedit harum facere quos saepe possimus, velit eligendi! Sed aliquid molestias reiciendis natus. Reiciendis, ea, harum!Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Tempora porro eveniet voluptates harum voluptatem reiciendis temporibus atque quaerat, repudiandae aut dolorem, cumque, quam enim sequi aspernatur autem. Beatae, maiores, possimus!</p>
-      </div>
-      <div class="main__pane">
-        <img src="img/us.jpg" alt="" class="about__img">
+          adipisicing elit. aspernatur autem. Beatae, maiores, possimus!</p>
       </div>
     </div>
   </section>
@@ -64,21 +82,36 @@
     <div class="wrap">
       <h1 class="main-h1">Товар</h1>
       <div class="color__line"></div>
-      <div class="wrap__flex">
-        <div class="products__type">
+      <div class="wrap__flex prod__wrap">
+        <div class="products__type products-type">
+          <div class="products-type__imgWrap">
           <img src="img/7.jpg" alt="" class="products__img">
+          </div>
+          <div class="products-type__text">
+          <h1 class="products-type__h1">Пастила</h1>
           <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat non eum praesentium atque natus autem quas,
             vel, recusandae voluptas, corrupti iusto assumenda. Fugit cupiditate, mollitia quaerat, recusandae sunt quo.</p>
         </div>
-        <div class="products__type">
-          <img src="img/8.jpg" alt="" class="products__img">
-          <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos rerum labore, laboriosam laudantium id debitis dolores saepe quaeipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur
-            adipisicing elit. rat repellat perferendis omnis maxime esse similique, porro eveniet architecto eum culpa nesciunt!</p>
         </div>
-        <div class="products__type">
-          <img src="img/9.jpg" alt="" class="products__img">
-          <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, ut, accusamus. Est ullam at itaque perferendis asperiores ut. Soluta fugit sapiente minima, ipsum quas blanditiis voluptates exercipsum dolor sit amet,
-            consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. itationem aperiam vero perspiciatis!</p>
+        <div class="products__type products-type">
+          <div class="products-type__imgWrap">
+          <img src="img/7.jpg" alt="" class="products__img">
+          </div>
+          <div class="products-type__text">
+          <h1 class="products-type__h1">Фрипсы</h1>
+          <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat non eum praesentium atque natus autem quas,
+            vel, recusandae voluptas, corrupti iusto assumenda. Fugit cupiditate, mollitia quaerat, recusandae sunt quo.</p>
+        </div>
+        </div>
+        <div class="products__type products-type" id="products-type__box">
+          <div class="products-type__imgWrap">
+          <img src="img/7.jpg" alt="" class="products__img">
+          </div>
+          <div class="products-type__text">
+          <h1 class="products-type__h1">Набор</h1>
+          <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat non eum praesentium atque natus autem quas,
+            vel, recusandae voluptas, corrupti iusto assumenda. Fugit cupiditate, mollitia quaerat, recusandae sunt quo.</p>
+        </div>
         </div>
       </div>
     </div>
@@ -89,7 +122,7 @@
       <div class="color__line"></div>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила яблочная</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -97,7 +130,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/2.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила из тыквы</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -105,15 +138,15 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/3.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Пастила яблочно-мятная</h2>
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
+          <h2 class="main-h2">Пастила яблоко/мята</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
           <p class="swiper-slide__sp">200грн - 200гр</p>
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/4.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила из свеклы</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -121,7 +154,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/5.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила из кураги</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -129,7 +162,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/6.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила овощная</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -145,7 +178,7 @@
       <div class="color__line"></div>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="img/10.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила яблочная</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -153,7 +186,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/11.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила из тыквы</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -161,7 +194,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/12.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила яблочно-мятная</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -169,7 +202,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/13.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила из свеклы</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -177,7 +210,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/14.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила из кураги</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -185,7 +218,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/15.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила овощная</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -193,7 +226,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/16.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила овощная</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -201,7 +234,7 @@
           <button type="button" name="button" class="slider-slide__button">Купить</button>
         </div>
         <div class="swiper-slide">
-          <img src="img/17.jpg" alt="" class="swiper-slide__img">
+          <img src="https://via.placeholder.com/900x900" alt="" class="swiper-slide__img">
           <h2 class="main-h2">Пастила овощная</h2>
           <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
           <p class="swiper-slide__sp">100грн - 100гр</p>
@@ -223,14 +256,14 @@
         <img src="https://via.placeholder.com/600x400" alt="" class="box__img">
       </div>
       <div class="box__pane" id="box__pane2">
-        <h2>Что такое набор?</h2>
+        <h1 class="products-type__h1">Что такое набор?</h1>
         <p class="box__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae illum, odio excepturi, laborum unde iusto veritatis labore ex culpa soluta corrupti modi doloremque reprehenderit atque voluptates libero. Nostrum, alias,
           perspiciatis.</p>
-        <p class="box__p1">В набор входит:</p>
+          <h1 class="products-type__h1">В набор входит:</h1>
         <ul class="box__ul">
-          <li class="box__li">Пастила</li>
-          <li class="box__li">Фрипсы</li>
-          <li class="box__li">Орешки</li>
+          <li class="box__li">Пастила (150г/250г)</li>
+          <li class="box__li">Фрипсы (70г)</li>
+          <li class="box__li">Орешки (50г)</li>
         </ul>
       </div>
       <div class="box__pane" id="box__pane3">
@@ -238,7 +271,7 @@
           <input type="text" class="pane__input" placeholder="Ваше имя">
           <input type="text" class="pane__input" placeholder="Ваш телефон">
           <textarea name="name" placeholder="Укажите наполнение набора" class="box__textarea"></textarea>
-          <button type="submit" class="slider-slide__button">Отправить</button>
+          <button type="submit" class="slider-slide__button">Заказать</button>
         </form>
       </div>
 
@@ -247,30 +280,25 @@
     <div class="wrap">
       <h1 class="main-h1" id="main-h1__advantages">Преимущества</h1>
       <div class="color__line" id="color-line__advantages"></div>
-      <div class="wrap__flex">
+      <div class="wrap__flex" id="advantages__wrap">
         <div class="advantages__block">
           <img src="https://via.placeholder.com/200x200" alt="" class="advantages-img">
-          <h1 class="secondary-h1">loremlorem</h1>
           <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
         </div>
         <div class="advantages__block">
           <img src="https://via.placeholder.com/200x200" alt="" class="advantages-img">
-          <h1 class="secondary-h1">loremlorem</h1>
           <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
         </div>
         <div class="advantages__block">
           <img src="https://via.placeholder.com/200x200" alt="" class="advantages-img">
-          <h1 class="secondary-h1">loremlorem</h1>
           <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
         </div>
         <div class="advantages__block">
           <img src="https://via.placeholder.com/200x200" alt="" class="advantages-img">
-          <h1 class="secondary-h1">loremlorem</h1>
           <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
         </div>
-        <div class="advantages__block">
+        <div class="advantages__block"  id="advantages__blockLast">
           <img src="https://via.placeholder.com/200x200" alt="" class="advantages-img">
-          <h1 class="secondary-h1">loremlorem</h1>
           <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
         </div>
       </div>
@@ -313,20 +341,21 @@
           <option disabled>Варианты граммовок фрипсов</option>
           <option value="100гр">100гр</option>
         </select>
-        <input type="text" name="Имя" class="order__info" placeholder="Имя">
-        <input type="phone" name="Телефон" class="order__info" id="order__phone" placeholder="Телефон">
-        <button type="submit" name="button" class="slider-slide__button order__button">Заказать</button>
+        <input type="text" required name="Имя" class="order__info" placeholder="Имя">
+        <input type="phone" required name="Телефон" class="order__info" id="order__phone" placeholder="Телефон">
+        <button type="submit" name="button" class="slider-slide__button order__button" id="order__submit">Заказать</button>
       </form>
       <div class="order__plus">
         <img src="img/plus.png" alt="" class="plus__img" id="plus__img">
       </div>
+      <div class="order__plus" id="order__plus"><img src="img/arrow-new1.png" alt="arrow-sign" class="plus__headline"></div>
     </div>
   </section>
   <section class="contact countable" id="contact">
     <div class="contact__wrap contact-wrap">
-      <div class="contact-wrap__pane">
+      <div class="contact-wrap__pane" id="contact-wrap__pane1">
         <h1 class="main-h1 h1-new">Контакты</h1>
-        <div class="color__line color-line__new"></div>
+        <div class="color__line color-line__new color-line__contact"></div>
         <div class="social__wrap">
           <ul class="social-wrap__ul">
             <li class="social__li"><i class="fas fa-phone-square-alt"></i><a href="#" class="social__a">
@@ -350,9 +379,9 @@
           </ul>
         </div>
       </div>
-      <div class="contact-wrap__pane">
+      <div class="contact-wrap__pane" id="contact-wrap__pane2">
         <h1 class="main-h1 h1-new">Остались вопросы?</h1>
-        <div class="color__line color-line__new"></div>
+        <div class="color__line color-line__new color-line__contact"></div>
         <form action="" class="message__form">
           <input type="text" class="pane__input" placeholder="Ваше имя">
           <input type="text" class="pane__input" placeholder="Ваш телефон">
@@ -361,21 +390,22 @@
           <button type="submit" class="slider-slide__button">Отправить</button>
         </form>
       </div>
-      <div class="contact-wrap__pane">
+      <div class="contact-wrap__pane" id="contact-wrap__pane3">
         <h1 class="main-h1 h1-new">Мы на карте</h1>
-        <div class="color__line color-line__new"></div>
+        <div class="color__line color-line__new color-line__contact"></div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.4608732722572!2d30.61404231572934!3d50.39524797946772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5b6f95e732f%3A0x1b541e73dbc06a69!2z0J7RgdC-0LrQvtGA0LrQuA!5e0!3m2!1suk!2sua!4v1574775672707!5m2!1suk!2sua"
           width="100%" height="330" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       </div>
     </div>
   </section>
-
+<footer class="footer">
+  <p class="footer__p">	&copy; youfruit 2019 all rights reserved</p>
+</footer>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="slick.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <!-- <script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script> -->
   <script src="script/script.js"></script>
 </body>
 
