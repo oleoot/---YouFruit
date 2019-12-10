@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $(".header__nav, .menu-ul, .slider-slide__button").on("click", "a", function(event) {
+  $(".header__nav, .menu-ul, .slider-slide__button, .slider__button").on("click", "a", function(event) {
     event.preventDefault();
     let id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -11,10 +11,12 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
   $('.slider').slick({
+    pauseOnFocus: true,
+    adaptiveHeight: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3000000,
     arrows: false
   });
 });
