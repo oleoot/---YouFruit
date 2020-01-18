@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  $(".header__nav, .menu-ul, .slider-slide__button, .slider__button").on("click", "a", function(event) {
+  $(".header__nav, .menu-ul, .slider-slide__a, .slider__button, .header__img").on("click", "a", function(event) {
     event.preventDefault();
     let id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -12,7 +12,6 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.slider').slick({
     pauseOnFocus: true,
-    adaptiveHeight: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -34,26 +33,26 @@ let swiper = new Swiper('.swiper-container', {
       slidesPerView: 1.5,
     },
     425: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.3,
     },
     768: {
-      slidesPerView: 2.5,
+      slidesPerView: 1.8,
     },
     1025: {
-      slidesPerView: 3.5,
+      slidesPerView: 2.8,
     },
     1280: {
-      slidesPerView: 3.5,
+      slidesPerView: 2.8,
     },
     1441: {
-      slidesPerView: 4.5,
-      spaceBetween: 50,
+      slidesPerView: 3.7,
+      // spaceBetween: 50,
     }
   }
 });
 
 $(document).ready(function() {
-  $(".order__form").submit(function() {
+  $(".order__form, .box__form").submit(function() {
     var th = $(this);
     $.ajax({
       type: "POST",
@@ -74,7 +73,7 @@ $(document).ready(function() {
 //     var th = $(this);
 //     $.ajax({
 //       type: "POST",
-//       url: "mail1.php",
+//       url: "mail.php",
 //       data: th.serialize()
 //     }).done(function() {
 //       alert("Thank you!");
@@ -127,4 +126,18 @@ function more() {
   form.appendChild(newNode);
   form.appendChild(newNodes);
   form.appendChild(newNodet);
+}
+
+
+
+
+
+let send = document.getElementById("popup");
+let push = document.getElementById("test");
+console.log(send);
+console.log(push);
+push.addEventListener("click", reveal);
+
+function reveal(){
+send.style.display = "block";
 }

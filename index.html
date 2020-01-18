@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/8d1911ab96.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick-theme.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
   <title>YouFruit</title>
 </head>
 
 <body>
   <header class="header">
-    <div class="wrap wrap__flex">
+    <div class="header__wrap wrap__flex">
       <div class="header__logo">
-        <img src="img/logo.png" alt="logo" class="header__img">
+        <a href="#slider__block"><img src="img/logo.png" alt="logo" class="header__img"></a>
+        <!-- <img src="img/phone.svg" alt="phone" class="phone">
+        <p>3807878787887</p> -->
       </div>
       <div class="header__name">
-        <h1 class="main-h1" id="h1__headline"><span>You</span>fruit</h1>
+        <h1 class="main-h1" id="h1__headline"><span class="logo__span">You</span>fruit</h1>
       </div>
       <nav class="header__nav header-nav">
         <ul class="header-nav__ul">
           <li class="header-nav__li"><a href="#about" class="header-nav__a">О нас</a></li>
           <li class="header-nav__li"><a href="#products" class="header-nav__a">Продукция</a></li>
           <li class="header-nav__li"><a href="#pastila" class="header-nav__a">Магазин</a></li>
-          <!-- <li class="header-nav__li"><a href="#advantages" class="header-nav__a">Преимущества</a></li> -->
           <li class="header-nav__li"><a href="#order" class="header-nav__a">Купить</a></li>
           <li class="header-nav__li"><a href="#contact" class="header-nav__a">Контакты</a></li>
         </ul>
@@ -52,285 +50,354 @@
       <li class="menu__li"><a href="#contact" class="menu-ul__a">Контакты</a></li>
     </ul>
   </div>
+  <div class="popup" id="popup">
+    <p>Введите данные</p>
+    <input type="text" required name="Имя" class="popup__input" placeholder="Имя">
+    <input type="tel" required name="Телефон" class="popup__input" id="order__phone" placeholder="Телефон">
+    <button type="submit" name="button" class="slider-slide__button" id="order__submit">Заказать</button>
+  </div>
   <div class="slider">
     <div class="slider__block slider-block" id="slider__block">
       <div class="slider-block__h">
-      <div class="slider-block__headline">
-      <p class="slider-block__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. nesciunt quo laboriosam, illum sunt, ut reprehenderit necessitatibus qui voluptates commodi vel. Ipsum.</p>
-      <button class="slider__button"><a href="#pastila" class="slider-block__a">Каталог</a></button>
-      </div>
+        <div class="slider-block__headline">
+          <h1 class="slider-block__h1">Пастила и Фруктовые чипсы</h1>
+          <p class="slider-block__p">Новый взгяд на сладости, созданный для хорошего здоровья и вкусной жизни</p>
+          <a href="#pastila" class="slider-block__a">Магазин</a>
+        </div>
       </div>
     </div>
     <div class="slider__block slider-block" id="slider__blockS">
-        <div class="slider-block__h">
-      <div class="slider-block__headline">
-      <p class="slider-block__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. nesciunt quo laboriosam, illum sunt, ut reprehenderit necessitatibus qui voluptates commodi vel. Ipsum.</p>
-      <button class="slider__button"><a href="#pastila" class="slider-block__a">Каталог</a></button>
+      <div class="slider-block__h">
+        <div class="slider-block__headline" id="slider-block__headline">
+          <p class="slider-block__p">Натуральные ингредиенты отсутствие добавок необычный вкус уникальность - все здесь </p>
+          <a href="#pastila" class="slider-block__a">Магазин</a>
+        </div>
       </div>
-    </div>
     </div>
   </div>
-  <section class="about uncountable" id="about">
-    <div class="headline__wrap">
-      <h1 class="main-h1">О нас</h1>
-      <div class="color__line"></div>
-    </div>
-    <div class="wrap wrap__flex" id="about__wrap">
-      <div class="main__pane">
-        <img src="img/us.jpg" alt="" class="about__img">
-        <img src="https://via.placeholder.com/400x500" alt="" class="about__imgPhone">
-      </div>
-      <div class="main__pane">
-        <p class="main-p" id="about__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero facilis, aperiam ullam ducimus nulla minima, laborum maxime. Illum, cupiditate. Tempora autem quidem similique, id aut error, dolorem omnis quam
-          in.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam officiis dicta fugiat at commodi assumenda corrupti quis beatae voluptates itaque ex, harum magnam perspiciatis odit, id, quaerat natus vel! Qui?Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Cum mollitia sapiente omnis iste tenetur impedit harum facere quos saepe possimus, velit eligendi! Sed aliquid molestias reiciendis natus. Reiciendis, ea, harum!Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. aspernatur autem. Beatae, maiores, possimus!</p>
+  <section class="about" id="about">
+    <div class="wrap wrap__flex">
+      <div id="about__wrap">
+        <div class="main__pane">
+          <img src="img/us5.jpg" alt="" class="about__img">
+          <img src="img/us3.jpg" alt="" class="about__img about__imgPhone">
+        </div>
+        <div class="main__pane" id="main-pane">
+          <h2 class="main-h1">О нашей компании</h2>
+          <p class="products__p1" id="about__desc">Правильно питаться стало легко и просто!</p>
+          <div class="color__line"></div>
+
+          <p class="main-p" id="about__p">Меня зовут Даша, а счастливого парня рядом - Олег. Мы студенты, которые всегда в поисках чего-то нового. Идея создания магазина правильного питания появилась очень давно. Активный образ жизни и занятия
+            спортом
+            всегда побуждали нас к поиску альтернативы сладостям.</p>
+
+        </div>
       </div>
     </div>
   </section>
-  <section class="products countable" id="products">
+  <section class="products" id="products">
     <div class="wrap">
-      <h1 class="main-h1">Товар</h1>
+      <h1 class="main-h1">Наша продукция</h1>
       <div class="color__line"></div>
-      <div class="wrap__flex prod__wrap">
-        <div class="products__type products-type">
-          <div class="products-type__imgWrap">
-            <img src="https://via.placeholder.com/1900x1200" alt="" class="products__img">
-          </div>
-          <div class="products-type__text">
-            <h1 class="products-type__h1">Пастила</h1>
-            <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat non eum praesentium atque natus autem quas,
-              vel, recusandae voluptas, corrupti iusto assumenda. Fugit cupiditate, mollitia quaerat, recusandae</p>
+      <p class="products__p1">
+        Изготовлено только из натуральных фруктов и овощей без добавления сахара и нежелательных консервантов
+      </p>
+      <div class="products__type products-type">
+        <div class="products-type__imgWrap">
+          <img src="img/prod-apple2.png" alt="" class="products__img">
+        </div>
+        <div class="products-type__text">
+          <div class="text__wrap">
+            <h2 class="products-type__h1">Натуральная пастила</h2>
+            <p class="products-type__p"><b>От 79 грн.</b></p>
+            <a href="#pastila" class="slider-slide__a slider-slide__button1">Купить</a>
+            <p class="products__p ">Пастила - это высушенное фруктовое пюре. <br>Благодаря длительной готовке на низкой температуре в ней сохраняются все полезные вещества. <br>В состав пастилы входят исключительно свежие фрукты.</p>
           </div>
         </div>
-        <div class="products__type products-type">
-          <div class="products-type__imgWrap">
-            <img src="https://via.placeholder.com/1900x1200" alt="" class="products__img">
-          </div>
-          <div class="products-type__text">
-            <h1 class="products-type__h1">Фрипсы</h1>
-            <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat non eum praesentium atque natus autem quas,
-              vel, recusandae voluptas, corrupti iusto assumenda. Fugit cupiditate, mollitia quaerat, recusandae</p>
-          </div>
-        </div>
-        <div class="products__type products-type" id="products-type__box">
-          <div class="products-type__imgWrap">
-            <img src="https://via.placeholder.com/1900x1200" alt="" class="products__img">
-          </div>
-          <div class="products-type__text">
-            <h1 class="products-type__h1">Набор</h1>
-            <p class="third-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat non eum praesentium atque natus autem quas,
-              vel, recusandae voluptas, corrupti iusto assumenda. Fugit cupiditate, mollitia quaerat, recusandae</p>
+      </div>
+
+      <div class="products__type products-type" id="products-type__frips">
+        <div class="products-type__text" id="products-type__fripsText">
+          <div class="text__wrap">
+            <h2 class="products-type__h1">Фруктовые чипсы</h2>
+            <p class="products-type__p"><b>79 грн.</b></p>
+            <a href="#frips" class="slider-slide__a slider-slide__button1">Купить</a>
+
+            <p class="products__p ">Фруктовые чипсы - открытие для тех, кто ищет альтернативу сладкому! Сходство с чипсами позволяет насладиться вкусом родом из кинотеатра, но с пользой для здоровья. Питаться правильно теперь стало не только полезно,
+              но и вкусно</p>
           </div>
         </div>
+        <div class="products-type__imgWrap" id="products__img">
+          <img src="img/prod-apple2.png" alt="" class="products__img">
+        </div>
+
+      </div>
+
+      <div class="products__type products-type" id="products-type__box">
+        <div class="products-type__imgWrap">
+          <img src="img/prod-apple2.png" alt="" class="products__img">
+        </div>
+        <div class="products-type__text">
+          <div class="text__wrap">
+            <h2 class="products-type__h1">Набор</h2>
+            <p class="products-type__p"><b>129 грн.</b></p>
+
+            <a href="#box" class="slider-slide__a slider-slide__button1">Купить</a>
+            <p class="products__p ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor sit amet, consectetur adipisicing elit. Quam quaerat non eum praesentium atque natus autem
+              quas</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section id="pastila">
-    <div class="swiper-container">
-      <h1 class="main-h1">Пастила</h1>
-      <div class="color__line"></div>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Пастила яблочная</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">150гр / 79грн</p>
-          <p class="swiper-slide__sp">250гр / 99грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Пастила тыквенная</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">150гр / 79грн</p>
-          <p class="swiper-slide__sp">250гр / 99грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Пастила яблоко/мята</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">150гр / 79грн</p>
-          <p class="swiper-slide__sp">250гр / 99грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Пастила из свеклы</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">150гр / 79грн</p>
-          <p class="swiper-slide__sp">250гр / 99грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Пастила из кураги</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">150гр / 79грн</p>
-          <p class="swiper-slide__sp">250гр / 99грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Пастила овощная</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">150гр / 79грн</p>
-          <p class="swiper-slide__sp">250гр / 99грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
+    <h1 class="main-h1">Натуральная пастила</h1>
+    <div class="color__line"></div>
+    <div class="goods__wrap">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/prod-apple.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Пастила яблочная</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">150гр / 79грн</p>
+            <p class="swiper-slide__sp">250гр / 99грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-apple.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Пастила тыквенная</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">150гр / 79грн</p>
+            <p class="swiper-slide__sp">250гр / 99грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-apple.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Пастила яблоко/мята</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">150гр / 79грн</p>
+            <p class="swiper-slide__sp">250гр / 99грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-apple.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Пастила из свеклы</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">150гр / 79грн</p>
+            <p class="swiper-slide__sp">250гр / 99грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-apple.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Пастила из кураги</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">150гр / 79грн</p>
+            <p class="swiper-slide__sp">250гр / 99грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-apple.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Пастила овощная</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">150гр / 79грн</p>
+            <p class="swiper-slide__sp">250гр / 99грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <section id="frips">
-    <div class="swiper-container s1">
-      <h1 class="main-h1">Фрипсы</h1>
-      <div class="color__line"></div>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Фрипсы яблочные</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">75гр / 69грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Фрипсы грушевые</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">75гр / 69грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Фрипсы из киви</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">75гр / 69грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Фрипсы банановые</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">75гр / 69грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Фрипсы апельсиновые</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">75гр / 69грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Фрипсы из шарона</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">75гр / 69грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/1.jpg" alt="" class="swiper-slide__img">
-          <h2 class="main-h2">Фрипсы кокосовые</h2>
-          <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
-          <p class="swiper-slide__sp">75гр / 69грн</p>
-          <button type="button" name="button" class="slider-slide__button"><a href="#order" class="slider-slide__a">Купить</a></button>
-        </div>
-      </div>
+    <h1 class="main-h1">Фруктовые чипсы</h1>
+    <div class="color__line"></div>
+    <div class="goods__wrap">
+      <div class="swiper-container s1">
 
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/prod-apple.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Фрипсы яблочные</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">75гр / 69грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-pear.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Фрипсы грушевые</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">75гр / 69грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-banana.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Фрипсы из банана</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">75гр / 69грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-orange.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Фрипсы апельсиновые</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">75гр / 69грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-kiwi.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Фрипсы из киви</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">75гр / 69грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/prod-sharon.png" alt="" class="swiper-slide__img">
+            <h2 class="main-h2">Фрипсы из шарона</h2>
+            <p class="swiper-slide__p">Lorem ipsum dolor sit amet, consectetur adipisicing elittaque quo id, nemo, explicabo eos velit?</p>
+            <p class="swiper-slide__sp">75гр / 69грн</p>
+            <a href="#order" class="slider-slide__a">Купить</a>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
   <section id="box">
-    <div class="box-main__wrap">
-      <h1 class="main-h1">Наборы</h1>
+    <div class="headline__wrap">
+      <h2 class="main-h1">Набор "Собери сам"</h2>
       <div class="color__line"></div>
+      <p class="products__p1">Набор Собери Сам позволяет попробвать все и сразу, просто выберите вкус и готово</p>
     </div>
-    <div class="box__wrapper">
+    <div class="wrap wrap__flex box__wrapper" id="box__wrap">
+      <div class="percent__wrap">
+        <div class="box__pane" id="box__paneImg">
+          <img src="img/box3.jpg" alt="" class="box__img">
+        </div>
+        <div class="box__pane" id="box__paneText">
+          <h2 class="products-type__h1 box__h1">Что такое Собери сам?</h2>
+          <p class="products__p" id="box__p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ab ipsam, sunt recusandae cupiditate, dolorem, distinctio impedit labore possimus incidunt eum aliquid, harum cum qui reiciendis vel
+            doloribus ducimus</p>
+          <h2 class="products-type__h1 box__h1">В набор входит:</h2>
+          <ul class="box__ul">
+            <li class="box__li">Пастила (250г)</li>
+            <li class="box__li">Фруктовые чипсы (70г)</li>
+            <li class="box__li">Орехи на выбор (50г)</li>
+          </ul>
+          <h2 class="products-type__h1 box__h1">Сделать заказ</h2>
+          <div class="box__pane" id="box__paneForm">
 
-      <div class="box__pane" id="box__pane1">
-        <img src="https://via.placeholder.com/600x400" alt="" class="box__img">
+            <form method="post" class="box__form">
+              <input type="hidden" name="project_name" value="YouFruit">
+              <input type="hidden" name="admin_email" value="youfruit.shop@gmail.com">
+              <input type="hidden" name="form_subject" value="Новый заказ Собери сам">
+              <!-- <input type="text" class="pane__input" placeholder="Ваше имя" name="Имя"> -->
+              <!-- <input type="text" class="pane__input" placeholder="Ваш телефон" name="Телефон"> -->
+              <!-- <textarea name="Набор" placeholder="Укажите наполнение набора" class="box__textarea"></textarea> -->
+              <select size="1" required name="Набор пастила" class="box__select">
+                <option selected disabled value="">Вкус пастилы</option>
+                <option value="Яблоко" class="select__pastila">Яблочная</option>
+                <option value="Тыква" class="select__pastila">Тыквенная</option>
+                <option value="Свекла" class="select__pastila">Свекольная</option>
+                <option value="Мята" class="select__pastila">Мятная</option>
+              </select>
+              <select size="1" required name="Набор фрипсы" class="box__select">
+                <option selected disabled value="">Вкус фруктовых чипсов</option>
+                <option value="Яблоко" class="select__pastila">Яблоко</option>
+                <option value="Груша" class="select__pastila">Груша</option>
+                <option value="Шарон" class="select__pastila">Шарон</option>
+                <option value="Банан" class="select__pastila">Банан</option>
+                <option value="Киви" class="select__pastila">Киви</option>
+                <option value="Апельсин" class="select__pastila">Апельсин</option>
+              </select>
+              <select size="1" required name="Набор орехи" class="box__select" id="box-select__nuts">
+                <option selected disabled value="">Тип орехов</option>
+                <option value="Миндаль" class="select__pastila">Миндаль</option>
+                <option value="Грецкий орех" class="select__pastila">Грецкий орех</option>
+                <option value="Кешью" class="select__pastila">Кешью</option>
+                <option value="Арахис" class="select__pastila">Арахис</option>
+              </select>
+              <button type="submit" class="slider-slide__button" name="button" id="box__button">Заказать</button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="box__pane" id="box__pane2">
-        <h1 class="products-type__h1">Что такое набор?</h1>
-        <p class="box__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae illum, odio excepturi, laborum unde iusto veritatis labore ex culpa soluta corrupti modi doloremque reprehenderit atque voluptates libero. Nostrum, alias,
-          perspiciatis.</p>
-        <h1 class="products-type__h1">В набор входит:</h1>
-        <ul class="box__ul">
-          <li class="box__li">Пастила (150г/250г)</li>
-          <li class="box__li">Фрипсы (70г)</li>
-          <li class="box__li">Орешки (50г)</li>
-        </ul>
-      </div>
-      <div class="box__pane" id="box__pane3">
-        <form method="post" class="box__form" action="telegram.php">
-          <input type="text" class="pane__input" placeholder="Ваше имя" name="Имя">
-          <input type="text" class="pane__input" placeholder="Ваш телефон" name="Телефон">
-          <textarea name="Набор" placeholder="Укажите наполнение набора" class="box__textarea"></textarea>
-          <button type="submit" class="slider-slide__button" method="post">Заказать</button>
-        </form>
-      </div>
-
+    </div>
   </section>
   <section id="advantages">
     <div class="wrap">
-      <h1 class="main-h1" id="main-h1__advantages">Преимущества</h1>
-      <div class="color__line" id="color-line__advantages"></div>
+      <h1 class="main-h1" id="main-h1__advantages">Преимущества <span class="adv">нашего продукта</span></h1>
+      <div class="color__line"></div>
       <div class="wrap__flex" id="advantages__wrap">
         <div class="advantages__block">
           <div class="advantages-block__wrap">
-          <img src="img/growth1.png" alt="" class="advantages-img">
-                </div>
-          <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
+            <img src="img/healthy.svg" alt="" class="advantages-img">
+          </div>
+          <p class="adv-headline"><b>Вкусно и полезно для организма</b></p>
+          <p class="secondary-p">Альтернатива сладкого для тех, кто следит за здоровьем и любит перекусить </p>
         </div>
         <div class="advantages__block">
           <div class="advantages-block__wrap">
-          <img src="img/apple1.png" alt="" class="advantages-img">
+            <img src="img/percent.svg" alt="" class="advantages-img">
           </div>
-          <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
+          <p class="adv-headline"><b>Натуральный продукт</b></p>
+          <p class="secondary-p">Не содержит нежелательных добавок и красителей</p>
         </div>
         <div class="advantages__block">
           <div class="advantages-block__wrap">
-          <img src="img/healthy.png" alt="" class="advantages-img">
+            <img src="img/packaging.svg" alt="" class="advantages-img">
           </div>
-          <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
+          <p class="adv-headline"><b>Компактная упаковка</b></p>
+          <p class="secondary-p">Перекус точно влезет в вашу сумочку или рюкзак и не станет лишней тяжестью!</p>
         </div>
         <div class="advantages__block">
           <div class="advantages-block__wrap">
-          <img src="img/wheat1.png" alt="" class="advantages-img">
+            <img src="img/present.svg" alt="" class="advantages-img">
           </div>
-          <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
+          <p class="adv-headline"><b>Оригинальный подарок</b></p>
+          <p class="secondary-p">Подарок должен быть вкусным и полезным. Наша продукция именно об этом</p>
         </div>
         <div class="advantages__block" id="advantages__blockLast">
           <div class="advantages-block__wrap">
-          <img src="img/measure.png" alt="" class="advantages-img">
+            <img src="img/barbell1.svg" alt="" class="advantages-img">
           </div>
-          <p class="secondary-p">Loremd quam consequatur quaerat facilis, magnam exercitationem quod? Quos atque dolor quas dicta odio? </p>
+          <p class="adv-headline"><b>Подходит спортсменам</b></p>
+          <p class="secondary-p">Восстанавливает силы после физических нагрузок</p>
         </div>
       </div>
     </div>
   </section>
+  <section class="questions">
+    <h1 class="main-h1" id="question__h">Остались вопросы? Задайте их здесь</h1>
+    <p class="products__p1" id="question__desc">Укажите мобильный телефон и наш менеджер свяжется с вами в течении 5 минут </p>
+    <div class="question-wrap">
+      <input type="tel" class="question__input" placeholder="Ваш телефон" name="Телефон">
+      <button type="submit" class="slider-slide__button" name="button" id="question__button">Задать вопрос</button>
+    </div>
+  </section>
   <section id="order">
+    <h1 class="main-h1">Оформить заказ</h1>
+    <div class="color__line"></div>
     <div class="wrap" id="order__wrap">
-      <h1 class="main-h1">Заказать</h1>
-      <div class="color__line"></div>
-      <form class="order__form" id="order__form" method="post">
+
+      <form class="order__form wrap__flex" id="order__form" method="post">
         <input type="hidden" name="project_name" value="YouFruit">
         <input type="hidden" name="admin_email" value="youfruit.shop@gmail.com">
         <input type="hidden" name="form_subject" value="Новый заказ">
         <select size="1" required name="Тип" class="order__select" id="order-select__first">
-          <option selected disabled>Тип / вкус</option>
+          <option selected disabled value="">Тип / вкус</option>
           <option disabled>Варианты вкусов пастилы</option>
           <option value="Пастила: Яблоко" class="select__pastila">Пастила: Яблочная</option>
           <option value="Пастила: Тыква" class="select__pastila">Пастила: Тыквенная</option>
           <option value="Пастила: Свекла" class="select__pastila">Пастила: Свекольная</option>
           <option value="Пастила: Мята" class="select__pastila">Пастила: Мятная</option>
-          <option disabled>Варианты вкусов фрипсов</option>
+          <option disabled> Варианты вкусов фрипсов</option>
           <option value="Фрипсы: Апельсин" class="select__pastila">Фрипсы: Апельсин</option>
           <option value="Фрипсы: Лимон" class="select__pastila">Фрипсы: Лимон</option>
           <option value="Фрипсы: Грейпфрут" class="select__pastila">Фрипсы: Грейпфрут</option>
           <option value="Фрипсы: Банан" class="select__pastila">Фрипсы: Банан</option>
         </select>
         <select size="1" required name="Количество" class="order__select" id="order-select__second">
-          <option selected disabled>Количество</option>
+          <option selected disabled value="">Количество</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -338,76 +405,52 @@
           <option value="5">5</option>
         </select>
         <select size="1" required name="Вес" class="order__select" id="order-select__third">
-          <option selected disabled>Вес</option>
+          <option selected disabled value="">Вес</option>
           <option disabled>Варианты граммовок пастилы</option>
           <option value="150гр">150гр</option>
           <option value="250гр">250гр</option>
           <option disabled>Варианты граммовок фрипсов</option>
           <option value="100гр">100гр</option>
         </select>
-        <input type="text" required name="Имя" class="order__info" placeholder="Имя">
-        <input type="phone" required name="Телефон" class="order__info" id="order__phone" placeholder="Телефон">
-        <button type="submit" name="button" class="slider-slide__button order__button" id="order__submit">Заказать</button>
+        <!-- <input type="text" required name="Имя" class="order__info" placeholder="Имя"> -->
+        <!-- <input type="phone" required name="Телефон" class="order__info" id="order__phone" placeholder="Телефон"> -->
+        <!-- <button type="button" name="button" class="slider-slide__button" id="test">Сделать заказ</button> -->
+        <button type="submit" name="button" class="slider-slide__button order__button" id="order__submit1">Заказать</button>
       </form>
       <div class="order__plus">
-        <img src="img/plus1.png" alt="" class="plus__img" id="plus__img">
+
+        <span class="plus__img"><img src="img/plus2.png" alt="" class="plus__img" id="plus__img"></span>
       </div>
-      <div class="order__plus" id="order__plus"><img src="img/arrow-new1.png" alt="arrow-sign" class="plus__headline"></div>
     </div>
   </section>
   <section class="contact" id="contact">
-    <div class="contact__wrap contact-wrap">
-      <div class="contact-wrap__pane" id="contact-wrap__pane1">
-        <h1 class="main-h1 h1-new">Контакты</h1>
-        <div class="color__line color-line__new color-line__contact"></div>
+    <div class="contact__wrap contact-wrap wrap wrap__flex">
+      <div class="contact-wrap__pane" id="contact-wrap__paneSocial">
         <div class="social__wrap">
-          <ul class="social-wrap__ul">
-            <li class="social__li"><i class="fas fa-phone-square-alt"></i><a href="tel:+380509382314" class="social__a">
-                <p class="social__p">+380509382314</p>
-              </a></li>
-            <li class="social__li"><i class="fas fa-envelope-square"></i><a href="mailto:youfruit.shop@gmail.com" class="social__a">
-                <p class="social__p">youfruit.shop@gmail.com</p>
-              </a></li>
-            <li class="social__li"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/youfruit_shop/" class="social__a">
-                <p class="social__p">Instagram</p>
-              </a></li>
-            <li class="social__li"><i class="fab fa-facebook-square"></i><a href="#" class="social__a">
-                <p class="social__p">Facebook</p>
-              </a></li>
-            <li class="social__li"><i class="fab fa-telegram-plane"></i><a href="tg://resolve?domain=<oleoot>" class="social__a">
-                <p class="social__p">Telegram</p>
-              </a></li>
-            <li class="social__li"><i class="fab fa-viber"></i><a href="viber://add?number=380667338900" class="social__a">
-                <p class="social__p">Viber</p>
-              </a></li>
-          </ul>
+          <a href="tel:+380509382314" class="social__a">
+            <p class="social__p"><b>+38 050 938 23 14</b></p>
+          </a>
+          <a href="mailto:youfruit.shop@gmail.com" class="social__a">
+            <p class="social__p"><b>youfruit.shop@gmail.com</b></p>
+          </a>
+          <p class="contact__text" id="contact__text">Метро Осокорки</p>
+          <p class="contact__text">Киев</p>
+          <div class="icons__wrap">
+            <a href="https://www.instagram.com/youfruit_shop/" class="social__a"><img src="img/instagram.svg" alt="" class="social__img"> </a>
+            <a href="#" class="social__a"><img src="img/facebook.svg" alt="" class="social__img"></a>
+            <a href="tg://resolve?domain=oleoot" class="social__a"><img src="img/telegram.svg" alt="" class="social__img"> </a>
+            <a href="viber://add?number=380667338900" class="social__a"><img src="img/viber.svg" alt="" class="social__img"></a>
+          </div>
         </div>
       </div>
-      <div class="contact-wrap__pane" id="contact-wrap__pane2">
-        <h1 class="main-h1 h1-new">Остались вопросы?</h1>
-        <div class="color__line color-line__new color-line__contact"></div>
-        <form action="telegram.php" class="message__form" method="post">
-          <input type="name" class="pane__input" placeholder="Ваше имя" name="name">
-          <input type="e-mail" class="pane__input" placeholder="Ваш телефон" name="e-mail">
-          <input type="phone" class="pane__input" placeholder="Тема сообщения" name="subject">
-          <textarea name="text" placeholder="Cообщениe"></textarea>
-          <button type="submit" class="slider-slide__button">Отправить</button>
-        </form>
-      </div>
-      <div class="contact-wrap__pane" id="contact-wrap__pane3">
-        <h1 class="main-h1 h1-new">Мы на карте</h1>
-        <div class="color__line color-line__new color-line__contact"></div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.4608732722572!2d30.61404231572934!3d50.39524797946772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c5b6f95e732f%3A0x1b541e73dbc06a69!2z0J7RgdC-0LrQvtGA0LrQuA!5e0!3m2!1suk!2sua!4v1574775672707!5m2!1suk!2sua"
-          width="100%" height="330" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-      </div>
     </div>
+
   </section>
   <footer class="footer">
     <p class="footer__p"> &copy; youfruit 2019 all rights reserved</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="slick.min.js"></script>
+  <script src="slick.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="script/script.js"></script>
