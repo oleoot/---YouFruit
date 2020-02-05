@@ -1,0 +1,37 @@
+*{
+margin: 0;
+padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+display: flex;
+}
+.wrapper{
+margin: 100px auto;
+}
+.logo-img{
+width: 300px;
+height: auto;
+display: block;
+margin:auto;
+}
+.main-headline{
+font-size: 50px;
+text-align: center;
+margin: 30px 10px;
+}
+.main-desc{
+width: 70%;
+margin: 0 auto;
+font-size: 30px;
+text-align: center;
+}
+@media only screen and (max-width: 425px) {
+.main-headline{
+font-size: 30px;
+}
+.main-desc{
+font-size: 20px;
+width: 90%;
+}
+}
