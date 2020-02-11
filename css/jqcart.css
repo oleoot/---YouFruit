@@ -64,6 +64,7 @@ margin: auto;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 0 7px 5px rgba(0, 0, 0, .3);
+    position: relative;
 }
 /* Сообщение "Корзина пуста" */
 .jqcart-empty-cart {
@@ -198,7 +199,6 @@ color: #fff;
     vertical-align: top;
 }
 .jqcart-orderform p:last-child {
-    margin-top: 40px;
     padding-top: 30px;
 }
 .jqcart-orderform input[type=text],
@@ -221,18 +221,26 @@ outline: none;
     margin-bottom: 20px;
 }
 .jqcart-orderform input[type=submit]{
-float: right;
-margin-right: 20px;
+display: block;
+margin: 0 auto;
 }
 .jqcart-orderform input[type=reset] {
-    float: left;
+    /* float: left; */
+    color: #000;
     margin-left: 20px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: #fff;
+    font-weight: bold;
 }
 .jqcart-error {
   margin-top: 20px;
     color: #f00;
 }
-
+.header{
+    z-index: 999;
+    }
 
 
 /* MEDIA */
@@ -346,20 +354,20 @@ float: none;
 margin-bottom: 20px;
 margin-right: 0;
 }
-.jqcart-orderform input[type=reset]{
+/* .jqcart-orderform input[type=reset]{
 width: 100%;
 background-color: #fff;
 color: #000;
 border: 3px solid #000;
 float: none;
 margin-left: 0;
-}
+} */
 .jqcart-checkout{
     margin-top: 0px;
     }
-.header{
+/* .header{
     z-index: 999;
-    }
+    } */
 }
 @media only screen and (max-width: 375px) {
 .jqcart-manage-order > div > div{
