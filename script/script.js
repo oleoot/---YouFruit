@@ -23,7 +23,7 @@ $(document).ready(function() {
 let swiper = new Swiper('.s1', {
   slidesPerView: 2.5,
   spaceBetween: 30,
-  // freeMode: true,
+  freeMode: true,
   breakpoints: {
     320: {
       slidesPerView: 1.5,

@@ -15,7 +15,7 @@
     visibleLabel = false,
     label = $('<div class="jqcart-cart-label"><span class="jqcart-title"><img src="img/icons/cart.svg" alt="корзина" class="cart"></span><div class="total-wrap"><span class="jqcart-total-cnt">0</span></div></div>'),
     modal = '<div class="jqcart-layout"><div class="jqcart-checkout">123</div></div>',
-    orderform = '<p class="jqcart-cart-title">Контактная информация:</p><form class="jqcart-orderform"><p><label>Имя:</label><input type="text" name="user_name"></p><p><label>Телефон:</label><input type="text" name="user_phone"></p><p><label>Email:</label><input type="text" name="user_mail"></p><p><input type="submit" value="Отправить заказ"><input type="reset" value="X"></p></form>';
+    orderform = '<p class="jqcart-cart-title">Контактная информация:</p><form class="jqcart-orderform"><p><label>Имя:</label><input type="text" name="user_name"></p><p><label>Телефон:</label><input type="text" name="user_phone"></p><p><label>Email:</label><input type="text" name="user_mail"></p><p><input type="submit" value="Отправить заказ"><input type="reset" value="X" ></p></form>';
   var opts = {
 		buttons: '.add_item',
 		cartLabel: 'body',

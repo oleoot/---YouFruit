@@ -14,9 +14,9 @@ $userdata - данные заказчика
 // Заголовок письма
 $subject = 'Заказ от '.date('d.m.Y').'г.';
 // ваш Email
-$admin_mail = 'oleoot28@gmail.com';
+$admin_mail = 'youfruit.shop@gmail.com';
 // Email заказчика (как fallback - ваш же Email)
-$to = !empty($userdata['oleoot28@gmail.com']) ? $userdata['oleoot28@gmail.com'] : $admin_mail;
+$to = !empty($userdata['youfruit.shop@gmail.com']) ? $userdata['youfruit.shop@gmail.com'] : $admin_mail;
 
 // Формируем таблицу с заказанными товарами
 $tbl = '<table style="width: 100%; border-collapse: collapse;">
