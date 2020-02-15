@@ -125,29 +125,71 @@ $(document).ready(function() {
 
 // // БЕКАП!!!!
 // // VANILLA JS
-let menuBar = document.getElementsByClassName("header-menu__bars")[0];
-let menu = document.getElementsByClassName('menu')[0];
-let cross = document.getElementsByClassName("menu__img")[0];
-let menuUl = document.getElementById('menu__ul');
+const navSlide = () =>{
+  const menu = document.querySelector(".menu");
+  const navBar = document.querySelector(".header__menu");
+  const navLinks = document.querySelectorAll(".menu__li");
+  const navLi = document.querySelectorAll(".menu__li");
+// Toggle Nav
+  navBar.addEventListener("click", () => {
+  menu.classList.toggle("menu-active");
 
-menuBar.addEventListener("click", menuToggle);
-//
-function menuToggle() {
-  menu.style.display = "block";
-}
-cross.addEventListener("click", closeAction);
+   // Animate links
+   navLinks.forEach((link, index) =>{
+    if(link.style.animation){
+     link.style.animation = '';
+    } else{
+      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s`;
+    }
 
-function closeAction() {
-  menu.style.display = 'none';
-}
-menuUl.addEventListener("click", close);
+  });
+  // Burger animation
+  navBar.classList.toggle("toggle");
 
-function close() {
-  menu.style.display = 'none';
+  });
+ //  close navbar
+navLi.forEach(function(link){
+link.addEventListener('click', ()=>{
+menu.classList.toggle("menu-active");
+navBar.classList.toggle("toggle");
+
+navLinks.forEach((link, index) =>{
+link.style.animation = '';
+});
+})
 }
+
+
+)}
+
+navSlide();
+
+
+
+
+
+// let menuBar = document.getElementsByClassName("header-menu__bars")[0];
+// let menu = document.getElementsByClassName('menu')[0];
+// let cross = document.getElementsByClassName("menu__img")[0];
+// let menuUl = document.getElementById('menu__ul');
+
+// menuBar.addEventListener("click", menuToggle);
+// //
+// function menuToggle() {
+//   menu.style.display = "block";
+// }
+// cross.addEventListener("click", closeAction);
+
+// function closeAction() {
+//   menu.style.display = 'none';
+// }
+// menuUl.addEventListener("click", close);
+
+// function close() {
+//   menu.style.display = 'none';
+// }
 
 let toTop = document.getElementById("backToTop");
-console.log(toTop)
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

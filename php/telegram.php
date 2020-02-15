@@ -5,15 +5,12 @@ $chat_id = "-1001422883871";
 $arr = array(
   'Телефон: ' => $phone,
 );
-
 foreach($arr as $key => $value) {
   $txt .= "<b>".$key."</b> ".$value."%0A";
 };
-
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
-
 if ($sendToTelegram) {
-  header('Location: call-phone/call-phone.html');
+  header("Location: ../call-phone/call-phone.html");
 } else {
   echo "Error";
 }
