@@ -1,6 +1,6 @@
 
-$(document).ready(function() {
-  $(".header__nav, .menu-ul, .text__wrap, .slider-block__headline").on("click", "a", function(event) {
+$(document).ready(function () {
+  $(".header__nav, .menu-ul, .text__wrap, .slider-block__headline").on("click", "a", function (event) {
     event.preventDefault();
     let id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -9,7 +9,7 @@ $(document).ready(function() {
     }, 1500);
   });
 });
-$(document).ready(function() {
+$(document).ready(function () {
   $('.slider').slick({
     pauseOnFocus: true,
     slidesToShow: 1,
@@ -52,70 +52,70 @@ let swiper = new Swiper('.s1', {
 
 // ОТЗЫВЫ
 let swiperRev = new Swiper('#s1', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      slidesPerGroup: 1,
-      freeMode: false,
-      loop: false,
-      // loopFillGroupWithBlank: true,
-      navigation: {
-        nextEl: '#js-next',
-        prevEl: '#js-prev',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        375: {
-          slidesPerView: 1,
-
-        },
-        425: {
-          slidesPerView: 1,
-          slidesPergroup: 0,
-          spaceBetween:10,
-        },
-        768: {
-          slidesPerView: 1,
-        },
-        900: {
-          slidesPerView: 1,
-        },
-        1025: {
-          slidesPerView: 2,
-        },
-        1280: {
-          slidesPerView: 2,
-        },
-        1441: {
-          slidesPerView: 3,
-        }
-      }
-    });
-
-    let swiperHead = new Swiper('.s3', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  freeMode: false,
+  loop: false,
+  // loopFillGroupWithBlank: true,
+  navigation: {
+    nextEl: '#js-next',
+    prevEl: '#js-prev',
+  },
+  breakpoints: {
+    320: {
       slidesPerView: 1,
-      loop: true,
-      autoplay: {
-        delay: 100000,
-      },
+    },
+    375: {
+      slidesPerView: 1,
+
+    },
+    425: {
+      slidesPerView: 1,
+      slidesPergroup: 0,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    900: {
+      slidesPerView: 1,
+    },
+    1025: {
+      slidesPerView: 2,
+    },
+    1280: {
+      slidesPerView: 2,
+    },
+    1441: {
+      slidesPerView: 3,
+    }
+  }
+});
+
+let swiperHead = new Swiper('.s3', {
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 100000,
+  },
 
 
 
-    });
-    //
+});
+//
 
 
-$(document).ready(function() {
-  $(".order__form, .box__form").submit(function() {
+$(document).ready(function () {
+  $(".order__form, .box__form").submit(function () {
     var th = $(this);
     $.ajax({
       type: "POST",
       url: "php/mail.php",
       data: th.serialize()
-    }).done(function() {
+    }).done(function () {
       window.open("thankYou/thank-you.html");
-      setTimeout(function() {
+      setTimeout(function () {
         th.trigger("reset");
       }, 1000);
     });
@@ -125,72 +125,51 @@ $(document).ready(function() {
 
 // // БЕКАП!!!!
 // // VANILLA JS
-const navSlide = () =>{
+const navSlide = () => {
   const menu = document.querySelector(".menu");
   const navBar = document.querySelector(".header__menu");
   const navLinks = document.querySelectorAll(".menu__li");
   const navLi = document.querySelectorAll(".menu__li");
-// Toggle Nav
+  // Toggle Nav
   navBar.addEventListener("click", () => {
-  menu.classList.toggle("menu-active");
+    menu.classList.toggle("menu-active");
 
-   // Animate links
-   navLinks.forEach((link, index) =>{
-    if(link.style.animation){
-     link.style.animation = '';
-    } else{
-      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s`;
-    }
+    // Animate links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = '';
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.5}s`;
+      }
+
+    });
+    // Burger animation
+    navBar.classList.toggle("toggle");
 
   });
-  // Burger animation
-  navBar.classList.toggle("toggle");
+  //  close navbar
+  navLi.forEach(function (link) {
+    link.addEventListener('click', () => {
+      menu.classList.toggle("menu-active");
+      navBar.classList.toggle("toggle");
 
-  });
- //  close navbar
-navLi.forEach(function(link){
-link.addEventListener('click', ()=>{
-menu.classList.toggle("menu-active");
-navBar.classList.toggle("toggle");
+      navLinks.forEach((link, index) => {
+        link.style.animation = '';
+      });
+    })
+  }
 
-navLinks.forEach((link, index) =>{
-link.style.animation = '';
-});
-})
+
+  )
 }
-
-
-)}
 
 navSlide();
 
 
 
 
-
-// let menuBar = document.getElementsByClassName("header-menu__bars")[0];
-// let menu = document.getElementsByClassName('menu')[0];
-// let cross = document.getElementsByClassName("menu__img")[0];
-// let menuUl = document.getElementById('menu__ul');
-
-// menuBar.addEventListener("click", menuToggle);
-// //
-// function menuToggle() {
-//   menu.style.display = "block";
-// }
-// cross.addEventListener("click", closeAction);
-
-// function closeAction() {
-//   menu.style.display = 'none';
-// }
-// menuUl.addEventListener("click", close);
-
-// function close() {
-//   menu.style.display = 'none';
-// }
-
 let toTop = document.getElementById("backToTop");
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
   if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 1500) {
@@ -201,8 +180,8 @@ function scrollFunction() {
 }
 
 
-$('#backToTop').click(function(){
-      $('html,body').animate({ scrollTop: 0 }, 800);
+$('#backToTop').click(function () {
+  $('html,body').animate({ scrollTop: 0 }, 800);
 });
 
 
@@ -216,22 +195,22 @@ $('#backToTop').click(function(){
 
 
 
-$(function(){
-	'use strict';
-	// инициализация плагина
-	$.jqCart({
-			buttons: '.add_item',
-			handler: './php/handler.php',
-			cartLabel: '.label-place',
-			visibleLabel: true,
-			openByAdding: false,
-			currency: '&#8372;'
-	});
-	// Пример с дополнительными методами
-	$('#open').click(function(){
-		$.jqCart('openCart'); // открыть корзину
-	});
-	$('#clear').click(function(){
-		$.jqCart('clearCart'); // очистить корзину
-	});
+$(function () {
+  'use strict';
+  // инициализация плагина
+  $.jqCart({
+    buttons: '.add_item',
+    handler: './php/handler.php',
+    cartLabel: '.label-place',
+    visibleLabel: true,
+    openByAdding: false,
+    currency: '&#8372;'
+  });
+  // Пример с дополнительными методами
+  $('#open').click(function () {
+    $.jqCart('openCart'); // открыть корзину
+  });
+  $('#clear').click(function () {
+    $.jqCart('clearCart'); // очистить корзину
+  });
 });
